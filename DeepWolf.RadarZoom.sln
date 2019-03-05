@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepWolf.RadarZoom", "DeepWolf.RadarZoom\DeepWolf.RadarZoom.csproj", "{F415245E-14A3-4CA7-AC94-97384261875F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F415245E-14A3-4CA7-AC94-97384261875F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F415245E-14A3-4CA7-AC94-97384261875F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F415245E-14A3-4CA7-AC94-97384261875F}.Debug|x64.ActiveCfg = Debug|x64
+		{F415245E-14A3-4CA7-AC94-97384261875F}.Debug|x64.Build.0 = Debug|x64
+		{F415245E-14A3-4CA7-AC94-97384261875F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F415245E-14A3-4CA7-AC94-97384261875F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F415245E-14A3-4CA7-AC94-97384261875F}.Release|x64.ActiveCfg = Release|x64
+		{F415245E-14A3-4CA7-AC94-97384261875F}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {408F5C32-89FC-4F14-A5D6-E382CCA40267}
+	EndGlobalSection
+EndGlobal
