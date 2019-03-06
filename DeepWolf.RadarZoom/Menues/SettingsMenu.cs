@@ -4,27 +4,55 @@
     using GTA;
     using NativeUI;
 
+    /// <summary>
+    /// Represents the menu for the settings.
+    /// </summary>
     internal class SettingsMenu
     {
         #region Constants
+        /// <summary>
+        /// The title of the menu.
+        /// </summary>
         public const string SettingsMenuTitle = "Radar Zoom";
+
+        /// <summary>
+        /// The sub title of the menu.
+        /// </summary>
         public const string SettingsMenuSubTitle = "Settings";
         #endregion Constants
 
         #region Fields
+        /// <summary>
+        /// The settings <see cref="UIMenu"/>.
+        /// </summary>
         private UIMenu settingsMenu;
+
+        /// <summary>
+        /// The menu button that is used to change the on foot zoom level.
+        /// </summary>
         private UIMenuItem onFootZoom;
+
+        /// <summary>
+        /// The menu button that is used to change the in vehicle zoom level.
+        /// </summary>
         private UIMenuItem inVehicleZoom;
+
+        /// <summary>
+        /// The menu button that is used to change the in building zoom level.
+        /// </summary>
         private UIMenuItem inBuildingZoom;
         #endregion Fields
 
         #region Constructors
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SettingsMenu"/> class.
+        /// </summary>
         internal SettingsMenu()
         {
             // Define the settings menu.
             settingsMenu = new UIMenu(SettingsMenuTitle, SettingsMenuSubTitle);
 
-            // Define UI elements.
+            // Set up the menu options.
             onFootZoom = new UIMenuItem("On Foot Zoom");
             onFootZoom.Description = "The zoom level when on foot.";
             onFootZoom.SetRightLabel(RadarZoomSettings.ZoomLevelOnFoot.ToString());
@@ -37,15 +65,14 @@
             inBuildingZoom.Description = "The zoom level when in a building.";
             inBuildingZoom.SetRightLabel(RadarZoomSettings.ZoomLevelInBuilding.ToString());
 
-
-            // Add UI elements to settings menu.
+            // Add options to the settings menu.
             settingsMenu.AddItem(onFootZoom);
             settingsMenu.AddItem(inVehicleZoom);
             settingsMenu.AddItem(inBuildingZoom);
 
             settingsMenu.RefreshIndex();
 
-            // Subscribe to UI elements events.
+            // Subscribe to UI events.
             settingsMenu.OnMenuClose += SettingsMenu_OnMenuClose;
             onFootZoom.Activated += OnFootZoom_Activated;
             inVehicleZoom.Activated += InVehicleZoom_Activated;
@@ -54,10 +81,16 @@
         #endregion Constructors
 
         #region Properties
+        /// <summary>
+        /// Gets the settings <see cref="UIMenu"/>.
+        /// </summary>
         public UIMenu Menu => settingsMenu;
         #endregion Properties
 
         #region Methods
+        /// <summary>
+        /// Shows the menu.
+        /// </summary>
         public void Show()
         {
             Menu.Visible = true;
