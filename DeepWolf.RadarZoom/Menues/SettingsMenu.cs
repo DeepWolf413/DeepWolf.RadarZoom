@@ -49,27 +49,32 @@
         /// </summary>
         internal SettingsMenu()
         {
-            // Define the settings menu.
+            // Set up the settings menu.
             settingsMenu = new UIMenu(SettingsMenuTitle, SettingsMenuSubTitle);
 
-            // Set up the menu options.
-            onFootZoom = new UIMenuItem("On Foot Zoom");
-            onFootZoom.Description = "The zoom level when on foot.";
+            // Set up menu options.
+            onFootZoom = new UIMenuItem("On Foot Zoom")
+            {
+                Description = "The zoom level when on foot."
+            };
             onFootZoom.SetRightLabel(RadarZoomSettings.ZoomLevelOnFoot.ToString());
 
-            inVehicleZoom = new UIMenuItem("In Vehicle Zoom");
-            inVehicleZoom.Description = "The zoom level when in a vehicle.";
+            inVehicleZoom = new UIMenuItem("In Vehicle Zoom")
+            {
+                Description = "The zoom level when in a vehicle."
+            };
             inVehicleZoom.SetRightLabel(RadarZoomSettings.ZoomLevelInVehicle.ToString());
 
-            inBuildingZoom = new UIMenuItem("In Building Zoom");
-            inBuildingZoom.Description = "The zoom level when in a building.";
+            inBuildingZoom = new UIMenuItem("In Building Zoom")
+            {
+                Description = "The zoom level when in a building."
+            };
             inBuildingZoom.SetRightLabel(RadarZoomSettings.ZoomLevelInBuilding.ToString());
 
-            // Add options to the settings menu.
+            // Add options to the menu.
             settingsMenu.AddItem(onFootZoom);
             settingsMenu.AddItem(inVehicleZoom);
             settingsMenu.AddItem(inBuildingZoom);
-
             settingsMenu.RefreshIndex();
 
             // Subscribe to UI events.
