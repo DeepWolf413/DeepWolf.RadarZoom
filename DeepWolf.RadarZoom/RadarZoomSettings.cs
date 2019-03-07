@@ -205,9 +205,9 @@
                 // Load all values from the INI file.
                 OpenMenuKey = settings.GetValue(GeneralSection, OpenMenuKeySettingName, Keys.Z);
 
-                ZoomLevelOnFoot = settings.GetValue(ZoomSection, ZoomLevelOnFootSettingName, 870);
-                ZoomLevelInVehicle = settings.GetValue(ZoomSection, ZoomLevelInVehicleSettingName, 1200);
-                ZoomLevelInBuilding = settings.GetValue(ZoomSection, ZoomLevelInBuildingSettingName, 850);
+                ZoomLevelOnFoot = settings.GetValue(ZoomSection, ZoomLevelOnFootSettingName, 840);
+                ZoomLevelInVehicle = settings.GetValue(ZoomSection, ZoomLevelInVehicleSettingName, 1100);
+                ZoomLevelInBuilding = settings.GetValue(ZoomSection, ZoomLevelInBuildingSettingName, 0);
             }
         }
     }
