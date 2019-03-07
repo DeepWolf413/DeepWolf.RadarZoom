@@ -8,48 +8,48 @@
     /// Represents the settings for the <see cref="RadarZoom"/> mod.
     /// Handles the saving and loading settings.
     /// </summary>
-    public static class RadarZoomSettings
+    internal static class RadarZoomSettings
     {
         #region Constants
         /// <summary>
         /// The name of the INI file with the extension.
         /// </summary>
-        public const string INIFileName = "RadarZoom.ini";
+        private const string INIFileName = "RadarZoom.ini";
 
         /// <summary>
         /// The relative path to the INI file.
         /// </summary>
-        public const string INIFilePath = "scripts/" + INIFileName;
+        private const string INIFilePath = "scripts/" + INIFileName;
 
         /// <summary>
         /// The name of the general section inside the INI file.
         /// </summary>
-        public const string GeneralSection = "GENERAL";
+        private const string GeneralSection = "GENERAL";
 
         /// <summary>
         /// The name of the zoom section inside the INI file.
         /// </summary>
-        public const string ZoomSection = "ZOOM";
+        private const string ZoomSection = "ZOOM";
 
         /// <summary>
         /// The name of the setting that holds the <see cref="OpenMenuKey"/> value inside the INI file.
         /// </summary>
-        public const string OpenMenuKeySettingName = "OPENMENUKEY";
+        private const string OpenMenuKeySettingName = "OPENMENUKEY";
 
         /// <summary>
         /// The name of the setting that holds the <see cref="ZoomLevelOnFoot"/> value inside the INI file.
         /// </summary>
-        public const string ZoomLevelOnFootSettingName = "ONFOOT";
+        private const string ZoomLevelOnFootSettingName = "ONFOOT";
 
         /// <summary>
         /// The name of the setting that holds the <see cref="ZoomLevelInVehicle"/> value inside the INI file.
         /// </summary>
-        public const string ZoomLevelInVehicleSettingName = "INVEHICLE";
+        private const string ZoomLevelInVehicleSettingName = "INVEHICLE";
 
         /// <summary>
         /// The name of the setting that holds the <see cref="ZoomLevelInBuilding"/> value inside the INI file.
         /// </summary>
-        public const string ZoomLevelInBuildingSettingName = "INBUILDING";
+        private const string ZoomLevelInBuildingSettingName = "INBUILDING";
         #endregion Constants
 
         #region Fields
@@ -97,7 +97,7 @@
         public static int ZoomLevelOnFoot
         {
             get => zoomLevelOnFoot;
-            set
+            internal set
             {
                 if (ZoomLevelOnFoot == value)
                 {
@@ -121,7 +121,7 @@
         public static int ZoomLevelInVehicle
         {
             get => zoomLevelInVehicle;
-            set
+            internal set
             {
                 if (ZoomLevelInVehicle == value)
                 {
@@ -145,7 +145,7 @@
         public static int ZoomLevelInBuilding
         {
             get => zoomLevelInBuilding;
-            set
+            internal set
             {
                 if (ZoomLevelInBuilding == value)
                 {
@@ -167,7 +167,7 @@
         /// <summary>
         /// Saves the settings to the INI file.
         /// </summary>
-        public static void SaveSettings()
+        internal static void SaveSettings()
         {
             // Check whether the INI file has been loaded.
             if (settings == null)
@@ -187,9 +187,8 @@
         /// <summary>
         /// Loads the settings from the INI file.
         /// </summary>
-        public static void LoadSettings()
+        internal static void LoadSettings()
         {
-            // Combine the path to a complete path to the INI file.
             string filePath = Path.Combine(Application.StartupPath, INIFilePath);
 
             if (!File.Exists(filePath))
