@@ -56,11 +56,6 @@
         private static ScriptSettings settings;
 
         /// <summary>
-        /// Whether the mod is enabled.
-        /// </summary>
-        private static bool isEnabled;
-
-        /// <summary>
         /// The key to press to open the menu.
         /// </summary>
         private static Keys openMenuKey;
