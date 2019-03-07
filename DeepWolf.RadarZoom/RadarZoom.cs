@@ -61,8 +61,9 @@
             if (currentZoomLevel != newZoomLevel)
             {
                 currentZoomLevel = newZoomLevel;
-                Game.RadarZoom = currentZoomLevel;
             }
+
+            Game.RadarZoom = currentZoomLevel;
         }
         #endregion Methods
 
